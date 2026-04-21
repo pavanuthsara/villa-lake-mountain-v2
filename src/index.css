@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@plugin "daisyui";
+
+body {
+  font-family: 'Libertinus Serif', serif;
+  background-color: #FDF9EE;
+}
