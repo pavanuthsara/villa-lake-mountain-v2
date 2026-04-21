@@ -1,27 +1,18 @@
-# My Web Project
+# Villa Lake Mountain Project
+Design file (Figma) - https://www.figma.com/design/Ductl4dn4dSqI0TbOJen35/Villa-lake-mountain-wireframes?node-id=79-98&t=yQNYTEyAUOBfHhWk-1
 
-Welcome to my web project! This README file provides basic information about the project and how to get started.
+### Guide for developers
+1.  Clone the project
+2.  Run `npm install` command in the root folder to install dependencies
+3.  `npm run dev` to start the project
 
-## Installation
+### Branch naming convention
+Use following naming convention when creating branches
 
-To install the necessary dependencies, run:
+`<your-name>/feat/ticket-no`
 
-```
-npm install
-```
+If it is a bug fix use `fix` instead of `feat` (feat means feature)
 
-## Usage
+eg: `pavan/feat/20` or `pavan/fix/11 `
 
-To start the project, use:
-
-```
-npm start
-```
-
-## Contributing
-
-Feel free to submit pull requests for any improvements!
-
-## License
-
-This project is licensed under the MIT License.
+Current Domain : <a>https://villalakemountain.netlify.app/</a>
