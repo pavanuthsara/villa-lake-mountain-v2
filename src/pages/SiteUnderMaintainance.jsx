@@ -2,7 +2,7 @@ import { Settings } from "lucide-react";
 
 function SiteUnderMaintainance() {
   const redirectToWhatsapp = () => {
-    window.open("https://wa.me/94777174586", "_blank");
+    window.open("https://wa.me/917709589459", "_blank");
   };
 
   const redirectToTelegram = () => {

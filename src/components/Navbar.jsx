@@ -27,7 +27,7 @@ const Navbar = () => {
 
   const whatsappMessage =
     "Hello! I'm interested in availability and pricing for the villas.";
-  const whatsappLink = `https://wa.me/94777174586?text=${encodeURIComponent(
+  const whatsappLink = `https://wa.me/917709589459?text=${encodeURIComponent(
     whatsappMessage,
   )}`;
 

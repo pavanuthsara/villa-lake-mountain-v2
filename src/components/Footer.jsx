@@ -19,7 +19,7 @@ const Footer = () => {
     {
       name: "WhatsApp",
       icon: MessageCircle,
-      url: "https://wa.me/94777174586",
+      url: "https://wa.me/917709589459",
       color: "hover:text-green-600",
     },
     {
