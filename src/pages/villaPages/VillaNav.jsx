@@ -25,7 +25,7 @@ const VillaNav = ({ currentPage = "villa" }) => {
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white-900 rounded flex items-center justify-center">
             </div>
-            <span className="text-lg sm:text-xl font-serif font-semibold text-white">Villa Lake Mountain</span>
+            <span className="text-lg sm:text-xl font-serif font-semibold text-white">Villa Lake Mountain by Artios</span>
           </div>
 
           {/* Desktop Menu */}

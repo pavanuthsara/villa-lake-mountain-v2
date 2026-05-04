@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <div className="text-white text-2xl font-bold flex items-center space-x-2">
               <img src={VLM_LOGO} alt="logo" className="h-8 w-auto" />
-              <span>Villa Lake Mountain</span>
+              <span>Villa Lake Mountain by Artios</span>
             </div>
           </div>
 

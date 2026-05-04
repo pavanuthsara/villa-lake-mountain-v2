@@ -62,7 +62,7 @@ const Footer = () => {
 
               {/* </div> */}
               <span className="text-xl font-serif font-semibold">
-                Villa Lake Mountain
+                Villa Lake Mountain by Artios
               </span>
             </div>
             <p className="text-gray-300 text-sm">
@@ -139,7 +139,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-grey-800 mt-8 pt-6 text-center">
           <p className="text-white-500 text-sm">
-            © {new Date().getFullYear()} Villa Lake Mountain. All rights
+            © {new Date().getFullYear()} Villa Lake Mountain by Artios. All rights
             reserved.
           </p>
         </div>

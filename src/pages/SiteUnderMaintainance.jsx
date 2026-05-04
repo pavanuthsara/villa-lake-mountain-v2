@@ -16,7 +16,7 @@ function SiteUnderMaintainance() {
           <Settings className="animate-spin duration-1000" size={48} />
           <h1 className="text-2xl md:text-5xl font-semibold">Site Under Maintainance</h1>
           <p className="text-sm mb-2 md:text-lg">
-            The Villa Lake Mountain website is currently under maintainance. If
+            The Villa Lake Mountain by Artios website is currently under maintainance. If
             you need to contact us please don't hesitate to send a message.
           </p>
           <div className="flex space-x-2">
