@@ -37,7 +37,7 @@ const Footer = () => {
     {
       name: "Airbnb",
       icon: Home,
-      url: "https://www.airbnb.com/users/profile/1470171256202131855?previous_page_name=PdpHomeMarketplace",
+      url: "https://www.airbnb.co.uk/rooms/1677953261025277903",
       color: "hover:text-red-500",
     },
     {
