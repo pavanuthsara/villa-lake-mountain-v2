@@ -36,7 +36,7 @@ const VillaSection = () => {
         "Enjoy a private group getaway with a full villa booking (upper and ground units combined) for up to ten guests. You'll get total privacy, traquil nature views and a calm atmosphere away from the crowds."
       ],
       altText: "Mountain villa with panoramic views",
-      route: "/"
+      route: "/villa/entire"
     }
   ];
 

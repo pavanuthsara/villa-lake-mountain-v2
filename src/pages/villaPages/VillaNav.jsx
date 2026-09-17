@@ -12,6 +12,8 @@ const VillaNav = ({ currentPage = "villa" }) => {
         return currentPage === "upper" ? "text-white" : "text-gray-300";
       case "ground":
         return currentPage === "ground" ? "text-white" : "text-gray-300";
+      case "entire":
+        return currentPage === "entire" ? "text-white" : "text-gray-300";
       default:
         return "text-gray-600";
     }
@@ -52,6 +54,12 @@ const VillaNav = ({ currentPage = "villa" }) => {
             >
               Upper Villa
             </a>
+            <a
+              href="/villa/entire"
+              className={`${isActivePageClass("entire")} hover:text-white-900 transition-colors`}
+            >
+              Entire Villa
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -87,6 +95,12 @@ const VillaNav = ({ currentPage = "villa" }) => {
               className={`block ${isActivePageClass("upper")} hover:text-gray-900 transition-colors py-2`}
             >
               Upper Villa
+            </a>
+            <a
+              href="/villa/entire"
+              className={`block ${isActivePageClass("entire")} hover:text-gray-900 transition-colors py-2`}
+            >
+              Entire Villa
             </a>
           </div>
         )}

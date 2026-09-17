@@ -1,8 +1,14 @@
 import { MessageCircle } from 'lucide-react';
 
 const VillaHeader = ({ title, descriptions, villaType }) => {
+  const villaNames = {
+    upper: 'Upper Villa',
+    ground: 'Ground Villa',
+    entire: 'Entire Villa'
+  };
+
   const handleBookNow = () => {
-    const message = `Hello, I would like to book the ${villaType === 'upper' ? 'Upper Villa' : 'Ground Villa'}.`;
+    const message = `Hello, I would like to book the ${villaNames[villaType] || 'Villa'}.`;
     const phoneNumber = '+917709589459';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

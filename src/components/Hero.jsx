@@ -24,6 +24,11 @@ const Hero = () => {
       image: Hero3,
       alt: "Lakeside retreat view 3",
     },
+    {
+      id: 4,
+      image: Hero3,
+      alt: "Lakeside retreat view 3",
+    },
   ];
 
   // Auto slideshow effect
