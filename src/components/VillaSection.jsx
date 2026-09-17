@@ -3,6 +3,7 @@ import VillaCard from "./reusable/VillaCard";
 
 import LakeHouse from '../assets/villaPages/groundVillaImages/villa_lake_mountain_inside.webp';
 import TreeHouse from '../assets/villaPages/upperVillaImages/upper_villa_outside.webp';
+import EntireVilla from '../assets/villaPages/entireVillaImages/entireVilla.webp';
 
 const VillaSection = () => {
   const navigate = useNavigate();
@@ -29,13 +30,13 @@ const VillaSection = () => {
     },
     {
       id: 3,
-      image: TreeHouse,
+      image: EntireVilla,
       villaName: "Entire Villa",
       description: [
-        "change me"
+        "Enjoy a private group getaway with a full villa booking (upper and ground units combined) for up to ten guests. You'll get total privacy, traquil nature views and a calm atmosphere away from the crowds."
       ],
       altText: "Mountain villa with panoramic views",
-      route: "/villa/upper"
+      route: "/"
     }
   ];
 

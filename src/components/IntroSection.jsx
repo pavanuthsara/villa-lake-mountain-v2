@@ -2,26 +2,26 @@ import React, { useState, useEffect } from 'react';
 // image imports
 import intro1 from "../assets/introImages/intro1.webp"
 import intro2 from "../assets/introImages/intro2.webp"
-import intro3 from "../assets/introImages/intro3.webp"
+import intro4 from "../assets/introImages/intro4.webp"
 
 const IntroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
     {
       id: 1,
-      src: intro2,
+      src: intro4,
       alt: "Relaxing in hammock by the lake",
       className: ""
     },
     {
       id: 2,
-      src: intro1,
+      src: intro2,
       alt: "Authentic Sri Lankan villa interior",
       className: ""
     },
     {
       id: 3,
-      src: intro3,
+      src: intro1,
       alt: "Modern comfort and local charm",
       className: ""
     }
