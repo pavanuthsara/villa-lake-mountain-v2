@@ -1,6 +1,65 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import VLM_LOGO from "../assets/vlm_logo.png";
+
+const villaTypes = ["Ground Villa", "Upper Villa", "Entire Villa"];
+
+const BookNowDropdown = ({ align = "right", onBook }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleVillaBook = (villaType) => {
+    const message = `Hello, I would like to book ${villaType}`;
+    window.open(
+      `https://wa.me/917709589459?text=${encodeURIComponent(message)}`,
+      "_blank",
+    );
+    setIsOpen(false);
+    if (onBook) onBook();
+  };
+
+  return (
+    <div
+      className="relative"
+      onPointerEnter={(e) => {
+        if (e.pointerType === "mouse") setIsOpen(true);
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === "mouse") setIsOpen(false);
+      }}
+    >
+      <button
+        type="button"
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="w-full inline-flex items-center justify-center bg-white text-gray-800 hover:bg-gray-100 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+      >
+        Book Now
+        <ChevronDown className="ml-1 h-4 w-4" />
+      </button>
+      {isOpen && (
+        <div
+          className={`absolute top-full z-50 ${
+            align === "right" ? "right-0" : "left-0"
+          }`}
+        >
+          <div className="pt-2">
+            <div className="bg-white rounded-md shadow-lg py-1 w-48">
+              {villaTypes.map((villa) => (
+                <button
+                  key={villa}
+                  type="button"
+                  onClick={() => handleVillaBook(villa)}
+                  className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+                >
+                  {villa}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,12 +84,6 @@ const Navbar = () => {
     { name: "Reviews", href: "#reviews" },
   ];
 
-  const whatsappMessage =
-    "Hello! I'm interested in availability and pricing for the villas.";
-  const whatsappLink = `https://wa.me/917709589459?text=${encodeURIComponent(
-    whatsappMessage,
-  )}`;
-
   return (
     <nav
       className="w-full fixed top-0 left-0 z-50"
@@ -40,10 +93,14 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-white text-2xl font-bold flex items-center space-x-2">
+            <a
+              href="#home"
+              onClick={(e) => handleScroll(e, "home")}
+              className="text-white text-2xl font-bold flex items-center space-x-2"
+            >
               <img src={VLM_LOGO} alt="logo" className="h-8 w-auto" />
               <span>Villa Lake Mountain by Artios</span>
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation Links */}
@@ -62,16 +119,9 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Desktop Button */}
+          {/* Desktop Button with Dropdown */}
           <div className="hidden md:block">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white text-gray-800 hover:bg-gray-100 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 inline-flex items-center"
-            >
-              Book Now
-            </a>
+            <BookNowDropdown align="right" />
           </div>
 
           {/* Mobile menu button */}
@@ -105,14 +155,7 @@ const Navbar = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full bg-white text-gray-800 hover:bg-gray-100 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 inline-flex items-center justify-center"
-              >
-                Book Now
-              </a>
+              <BookNowDropdown align="left" onBook={() => setIsMenuOpen(false)} />
             </div>
           </div>
         </div>
