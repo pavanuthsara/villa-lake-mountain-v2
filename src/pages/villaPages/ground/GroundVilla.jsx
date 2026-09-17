@@ -162,7 +162,7 @@ const GroundVilla = () => {
             </div>
 
             {/* Right: description + book now */}
-            <div>
+            <div className="md:border-l md:border-gray-200 md:pl-14">
               <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-4">
                 About your stay
               </h2>
